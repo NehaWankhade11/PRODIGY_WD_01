@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Landing-page</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="hero">
+        <div class="navbar">
+            
+            <ul>
+                <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">NEW SONG</a></li>
+                <li><a href="#">ALBUMS</a></li>
+                <li><a href="#">PLAYLIST</a></li>
+            </ul>
+        </div>
+
+
+        <div class="content">
+            <a href="" class="btn">2023 Popular</a>
+            <div class="right">
+                <h2>"Music is moonlight<br> in the gloomy night of life."</h2>
+            </div>
+            
+        </div>
+        <div class="play">
+            <p>Click To Play</p>
+            <img src="media.play.png" id="icon">
+        </div>
+      
+    </div>
+
+    <audio id="mysong">
+        <source src="walker.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src = "pause.png";
+            } else {
+                mysong.pause();
+                icon.src = "media.play.png";
+            }
+        }
+    </script>
+    
+</body>
+</html>
